@@ -11,6 +11,7 @@
     grid-column: 1 / 8;
     grid-row: 1 / 2;
     padding-right: 2%;
+    margin-top: 5px;
 }
 
 .menu1 {
@@ -32,9 +33,6 @@
 .main {
     grid-column: 2 / 8;
     grid-row: 2 / 3;
-    display: grid;
-    grid-template-columns: 2% 1fr 1fr;
-    grid-row: 1fr 1fr 1fr;
     margin-top: 0;
     margin-bottom: 10%;
     margin-left: 5%;
@@ -47,20 +45,9 @@
     text-align: center;
 }
 
-.textbox {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    padding: 10%;
-    margin-left: 20px;
-    margin-bottom: 1%;
-    background-color: #fffaf3;
-    vertical-align: top;
-    align-self: left;
-}
-
 .note-buttons {
-    grid-column: 2 / 3;
-    text-align: right;
+    position: relative;
+    left: 238px;
 }
 
 body {
@@ -74,11 +61,10 @@ body {
 
 .right {
     text-align: right;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
     margin-left: 0;
-    margin-right: 10px;
-    font-size: 1.75em;
+    margin-right: 5px;
 }
 
 .menu-align {
@@ -99,11 +85,68 @@ body {
 }
 
 .bullet {
-    grid-column: 1 / 2;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2e9de;
+    color:#286983;
     vertical-align: top;
-    font-size: 1.6em;
-    margin-right: 10px;
+    font-size: 2.4em;
+    margin-right: 5px;
 }
+
+.menu1-button {
+    font-family: 'Montserrat', sans-serif;
+    color:#286983;
+    border: none;
+    background-color: #f2e9de;
+    font-size: 1.25em;
+}
+
+.menu2-button {
+    font-family: 'Montserrat', sans-serif;
+    color:#286983;
+    border: none;
+    background-color: #fffaf3;
+    font-size: 2em;
+}
+
+.save {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2e9de;
+    color:#286983;
+    font-size: 1em;
+}
+
+.save:hover {
+    color: #56949f;
+}
+
+.save:active {
+    color: #9ccfd8;
+}
+
+.delete {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2e9de;
+    color:#d7827e;
+    font-size: 1em;
+}
+
+.delete:hover {
+    color: #ea9a97;
+}
+
+.delete:active {
+    color: #ebbcba;
+}
+
+textarea {
+    font-size: 17px;
+    resize: none;
+}
+
 
 li {
     list-style-type: none;
