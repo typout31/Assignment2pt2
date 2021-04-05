@@ -1,37 +1,5 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    grid-template-rows: 10% auto 5%;
-    background-color: #f2e9de;
-    width: 100vw;
-    height: 100vh;
-}
-
-header {
-    grid-column: 1 / 8;
-    grid-row: 1 / 2;
-    padding-right: 2%;
-}
-
 menu {
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
     background-color: #fffaf3;
-}
-
-main {
-    grid-column: 2 / 8;
-    grid-row: 2 / 3;
-    margin-top: 0;
-    margin-bottom: 10%;
-    margin-left: 5%;
-    margin-right: 0;
-}
-
-footer {
-    grid-column: 1 / 7;
-    grid-row: 3 / 4;
-    text-align: center;
 }
 
 .note-buttons {
@@ -41,11 +9,10 @@ footer {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #f2e9de;
     color: #286983;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .right {
@@ -142,11 +109,40 @@ li {
     display: inline;
     float: right;
     padding-right: 15px;
+    vertical-align: center;
 }
 
 @media only screen and (max-width: 600px) {
     header, menu {
         font-size: 1.05em;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-rows: 2% 25% auto 5%;
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    header {
+        grid-row: 1 / 2;
+        vertical-align: center;
+    }
+
+    menu {
+        grid-row: 2 / 3;
+        padding-right: 10px;
+    }
+
+    main {
+        grid-row: 3 / 4;
+    }
+
+    footer {
+        grid-row: 4 / 5;
+        text-align: center;
     }
     
 }
@@ -154,6 +150,44 @@ li {
 @media only screen and (min-width: 601px) {
     header, menu, body, main {
         font-size: 1em; 
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto;
+        grid-template-rows: 10% auto 5%;
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    header {
+        grid-column: 1 / 8;
+        grid-row: 1 / 2;
+        padding-right: 2%;
+        padding-top: 2%;
+    }
+    
+    menu {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        background-color: #fffaf3;
+    }
+    
+    main {
+        grid-column: 2 / 8;
+        grid-row: 2 / 3;
+        margin-top: 0;
+        margin-bottom: 10%;
+        margin-left: 5%;
+        margin-right: 0;
+    }
+    
+    footer {
+        grid-column: 2 / 7;
+        grid-row: 3 / 4;
+        text-align: center;
     }
 }    
 
