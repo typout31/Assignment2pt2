@@ -23,24 +23,14 @@
             <div class="menu-align">
                 <li>
                     <ul class="note-header">my notes</ul>
-                    <ul>note one</ul>
-                    <ul>note two</ul>
                 </li>
             </div>
         </menu>
         <main>
             <div class="add-note">
-                <a href="#newnote" class="bullet sameline">+</a>
+                <button class="bullet sameline" onclick="createContentWritingArea()">+</span>
             </div>
-            <div id="newnote" class="new-note">
-                <div class="note-content">
-                    <textarea rows="10" cols="30"> your note here</textarea>
-                    <br>
-                    <div class="note-buttons">
-                        <button class="save sameline" type="button">save</button>
-                        <button class="delete sameline" type="button">delete</button>
-                    </div>
-                </div>
+            <div id="note-content">
             </div>
         </main>
         <footer>

@@ -90,15 +90,38 @@ button {
     font-size: 1em;
 }
 
-.new-note {
-    opacity: 0;
-    pointer-events: none;
+#note-content {
+    padding: 10px 20px;
+    max-width: 600px;
 }
 
-.new-note:target {
-    opacity: 1;
-    pointer-events: all;
+button {
+    font-size: 1em;
+    padding-top: 5px;
+    border: none;
+    background-color: transparent;
+    color: #286983;
 }
+
+[contenteditable] {
+    font-size: 1em;
+    color: #286983;
+}
+
+[contenteditable] > div{
+    font-size: 18px;
+    color: #286983;
+}
+
+[contenteditable] > div:first-child{
+    font-size: 1em;
+    color: #286983;
+}
+
+[contenteditatble]:focus {
+    outline: none;
+}
+
 
 .save {
     border: none;

@@ -4,10 +4,10 @@
 */
 
 function darkTheme() {
-  var element = document.body;
+  let element = document.body;
   element.classList.toggle("dark-mode")
-  var button = document.getElementById("button").style.backgroundColor;
-  var color = '';
+  let button = document.getElementById("button").style.backgroundColor;
+  let color = '';
 
   if (color !== '#6e6a86') {
     color = '#6e6a86';
@@ -30,25 +30,54 @@ New note button:
 
 -    new notes in the notesArray should display on the the list of notes with a note title on the side
 */
-var newnotebutton = document.getElementById("new-note")
-var savebutton = document.getElementById("save-button")
-var deletebutton = document.getElementById("delete-button")
+const notesArray = []
 
-
-savebutton.addEventListener("click", function() {
-  createNote();
-})
-
-deletebutton.addEventListener("click", function() {
-  deleteNote();
-})
-
-function createNote() {
-
+function defineNoteWritingSection() {
+  html = `
+  <div id="note-area">
+    <div id="note" contenteditable="true"></div>
+    <button onclick="saveNote()">save</button>
+    <button onclick="clear()">clear</button>
+  </div>
+  `
+  return html
 }
 
-function deleteNOte() {
+function createContentWritingArea() {
+  const div = document.querySelector('#note-content')
+  div.insertAdjacentHTML('beforeend', defineNoteWritingSection())
+  setCursor()
+}
 
+function setCursor() {
+  const div = document.querySelector("#note")
+  div.focus()
+}
+
+function saveNote() {
+  const div = document.querySelector('#note')
+  const title = div.firstChild.textContent
+  const body = convertDivsToString()
+  notesArray.push(createNote(title, body))
+  clear()
+}
+
+function createNote(title, body) {
+  return { title, body }
+}
+
+function convertDivsToString() {
+  let str = ""
+  const divs = [...document.querySelectorAll('[contenteditable] > div:not(:first-child)')]
+  for (const i of divs) {
+    str += `${i.textContent}\n`
+  }
+  return str
+}
+
+function clear() {
+  const div = document.querySelector('#note-area')
+  div.remove()
 }
 
 /* display note that is clicked 
@@ -59,4 +88,6 @@ Note title:
       app to its original state
 
 */
+
+
 
