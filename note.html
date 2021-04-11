@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=devece-width", initial-scale=1.0>
     <link rel="stylesheet" href="CSS/styles.css">
+    
     <title>Notes</title>
 </head>
 <body>
@@ -12,6 +13,7 @@
             <ul>
                 <li><a>Docs</a></li>
                 <li><a>About</a></li>
+                <li><button id="button" onclick="darkTheme()">Theme</button></li>
             </ul>
         </header>
         <menu>
@@ -27,12 +29,18 @@
             </div>
         </menu>
         <main>
-            <button class="bullet sameline button-styled">+</button>
-            <textarea rows="10" cols="30"> your note here</textarea>
-            <br>
-            <div class="note-buttons">
-                <button class="save sameline" type="button">save</button>
-                <button class="delete sameline" type="button">delete</button>
+            <div class="add-note">
+                <a href="#newnote" class="bullet sameline">+</a>
+            </div>
+            <div id="newnote" class="new-note">
+                <div class="note-content">
+                    <textarea rows="10" cols="30"> your note here</textarea>
+                    <br>
+                    <div class="note-buttons">
+                        <button class="save sameline" type="button">save</button>
+                        <button class="delete sameline" type="button">delete</button>
+                    </div>
+                </div>
             </div>
         </main>
         <footer>

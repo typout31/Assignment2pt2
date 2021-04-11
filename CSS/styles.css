@@ -15,6 +15,21 @@ body {
     padding: 0;
 }
 
+button {
+    background-color: #f2e9de;
+    border: none;
+}
+
+.dark-mode {
+    background-color: #6e6a86;
+}
+
+.dark-button {
+    background-color: #6e6a86;
+    color: white;
+}
+
+
 .right {
     text-align: right;
     margin-top: 15px;
@@ -43,6 +58,7 @@ body {
 .bullet {
     border: none;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
     background-color: #f2e9de;
     color:#286983;
     vertical-align: top;
@@ -64,6 +80,24 @@ body {
     border: none;
     background-color: #fffaf3;
     font-size: 2em;
+}
+
+.theme-button {
+    font-family: 'Montserrat', sans-serif;
+    color:#286983;
+    border: none;
+    background-color: #f2e9de;
+    font-size: 1em;
+}
+
+.new-note {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.new-note:target {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .save {
