@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=devece-width", initial-scale=1.0>
     <link rel="stylesheet" href="CSS/styles.css">
-    
     <title>Notes</title>
 </head>
 <body>
@@ -16,22 +15,22 @@
                 <li><button id="button" onclick="darkTheme()">Theme</button></li>
             </ul>
         </header>
-        <menu>
+        <menu id="menu">
             <div class="right">
                 <button class="menu2-button"><<</button>
             </div>
             <div class="menu-align">
-                <li>
-                    <ul class="note-header">my notes</ul>
-                </li>
+                <ul>
+                    <li class="note-header">my notes</li>
+                    <div id="title-list"></div>
+                </ul>
             </div>
         </menu>
         <main>
             <div class="add-note">
                 <button class="bullet sameline" onclick="createContentWritingArea()">+</span>
             </div>
-            <div id="note-content">
-            </div>
+            <div id="note-content"></div>
         </main>
         <footer>
             <p>created by or copyright or social media links footer</p>

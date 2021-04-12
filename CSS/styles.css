@@ -16,19 +16,23 @@ body {
 }
 
 button {
-    background-color: #f2e9de;
+    background-color: transparent;
     border: none;
 }
 
 .dark-mode {
     background-color: #6e6a86;
+    color: #f2e9de;
 }
 
-.dark-button {
-    background-color: #6e6a86;
-    color: white;
+.dark-mode-menu {
+    background-color: #9892b9;
+    color: #f2e9de93;
 }
 
+.dark-mode-button {
+    color: #f2e9de;
+}
 
 .right {
     text-align: right;
@@ -59,7 +63,7 @@ button {
     border: none;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    background-color: #f2e9de;
+    background-color: transparent;
     color:#286983;
     vertical-align: top;
     font-size: 2.4em;
@@ -70,7 +74,7 @@ button {
     font-family: 'Montserrat', sans-serif;
     color:#286983;
     border: none;
-    background-color: #f2e9de;
+    background-color: transparent;
     font-size: 1.25em;
 }
 
@@ -78,7 +82,7 @@ button {
     font-family: 'Montserrat', sans-serif;
     color:#286983;
     border: none;
-    background-color: #fffaf3;
+    background-color: transparent;
     font-size: 2em;
 }
 
@@ -86,7 +90,7 @@ button {
     font-family: 'Montserrat', sans-serif;
     color:#286983;
     border: none;
-    background-color: #f2e9de;
+    background-color: transparent;
     font-size: 1em;
 }
 

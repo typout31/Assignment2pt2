@@ -4,20 +4,12 @@
 */
 
 function darkTheme() {
-  let element = document.body;
-  element.classList.toggle("dark-mode")
-  let button = document.getElementById("button").style.backgroundColor;
-  let color = '';
-
-  if (color !== '#6e6a86') {
-    color = '#6e6a86';
-    document.getElementById('button').style.backgroundColor = color;
-    }
-
-  else if (color == '#6e6a86') {
-  color = '#f2e9de';
-  document.getElementById('button').style.backgroundColor = color;
-    }
+  let bodyElement = document.body;
+  let menuElement = document.getElementById("menu");
+  let buttonElement = document.getElementById("button");
+  bodyElement.classList.toggle("dark-mode")
+  menuElement.classList.toggle("dark-mode-menu")
+  buttonElement.classList.toggle("dark-mode-button")
 }
 
 
@@ -59,6 +51,7 @@ function saveNote() {
   const title = div.firstChild.textContent
   const body = convertDivsToString()
   notesArray.push(createNote(title, body))
+  menuitem(title)
   clear()
 }
 
@@ -80,6 +73,13 @@ function clear() {
   div.remove()
 }
 
+let titleList = ''
+function menuitem(title) {
+  titleList += `<li id="display" onclick="displayNote()">${title}</li><br>`
+  document.getElementById('title-list').innerHTML = titleList;
+}
+
+
 /* display note that is clicked 
 
 Note title:
@@ -89,5 +89,26 @@ Note title:
 
 */
 
+function displayNoteArea(body) {
+  html = `
+  <div id="note-area">
+    <div id="note" contenteditable="true">${body}</div>
+    <button onclick="saveNote()">save</button>
+    <button onclick="clear()">clear</button>
+  </div>
+  `
+  return html
+}
 
+function displayNote() {
+  let title = document.getElementById('display')
+  for (i = 0; i < notesArray.length; i++) {
+    if (title === notesArray[i][0]) {
+      let body = notesArray[i][1]
+      const div = document.querySelector('#note-content')
+      div.insertAdjacentHTML('beforeend', defineNoteArea(body))
+      setCursor()
+    }
+  }
+}
 
